@@ -6,7 +6,7 @@ pipeline {
         sh 'echo test > testscp.jar'
         sh 'ls'
         sleep 5
-        input 'message-test'
+        input(message: 'message-test', id: 'testAdd', ok: 'proceed')
       }
     }
     stage('Test') {
